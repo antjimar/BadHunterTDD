@@ -19,6 +19,7 @@
 		CF6D6E151A32483800C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E141A32483800C8CADA /* Agent.m */; };
 		CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E171A32485900C8CADA /* Agent+Model.m */; };
 		CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E191A3248B000C8CADA /* AgentTests.m */; };
+		CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

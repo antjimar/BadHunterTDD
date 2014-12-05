@@ -9,6 +9,7 @@
 
 #import "Agent+Model.h"
 
+NSString *const agentEntityName = @"Agent";
 
 
 @implementation Agent (Model)
@@ -16,7 +17,9 @@
 #pragma mark - Convenience constructor
 
 + (instancetype) agentInMOC:(NSManagedObjectContext *)moc {
-    return nil;
+    Agent *agent = [NSEntityDescription insertNewObjectForEntityForName:agentEntityName
+                                                 inManagedObjectContext:moc];
+    return agent;
 }
 
 @end
