@@ -92,12 +92,16 @@
 #pragma mark - Basic test
 
 - (void) testObjectIsNotNil {
-    // Prepare
-
-    // Operate
-
-    // Check
     XCTAssertNotNil(sut, @"The object to test must be created in setUp.");
+}
+
+
+- (void) testAppraisalValueIsCalculatedFromDestPowerAndMotivation {
+    sut.destructionPower = @3;
+    sut.motivation = @4;
+    
+    XCTAssertEqual([sut.appraisal unsignedIntegerValue], (NSUInteger)3,
+                   @"Appraisal should be calculated from destruction power and motivation");
 }
 
 @end

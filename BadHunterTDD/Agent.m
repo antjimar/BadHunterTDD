@@ -14,5 +14,6 @@
 @dynamic name;
 @dynamic destructionPower;
 @dynamic motivation;
+@dynamic appraisal;
 
 @end

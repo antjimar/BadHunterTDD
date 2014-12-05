@@ -22,4 +22,11 @@ NSString *const agentEntityName = @"Agent";
     return agent;
 }
 
+
+#pragma mark - Custom getters & setters
+
+- (NSNumber *) appraisal {
+    return @3;
+}
+
 @end
