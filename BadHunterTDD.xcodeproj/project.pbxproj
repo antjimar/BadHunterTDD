@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF6D6DE71A32425B00C8CADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DE61A32425B00C8CADA /* main.m */; };
+		CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DE91A32425B00C8CADA /* AppDelegate.m */; };
+		CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
+		CF6D6DF01A32425B00C8CADA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEF1A32425B00C8CADA /* MasterViewController.m */; };
+		CF6D6DF31A32425B00C8CADA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DF21A32425B00C8CADA /* DetailViewController.m */; };
+		CF6D6DF61A32425B00C8CADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF41A32425B00C8CADA /* Main.storyboard */; };
+		CF6D6DF81A32425B00C8CADA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF71A32425B00C8CADA /* Images.xcassets */; };
+		CF6D6DFB1A32425B00C8CADA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF91A32425B00C8CADA /* LaunchScreen.xib */; };
+		CF6D6E071A32425B00C8CADA /* BadHunterTDDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF6D6E011A32425B00C8CADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF6D6DD91A32425B00C8CADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF6D6DE01A32425B00C8CADA;
+			remoteInfo = BadHunterTDD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF6D6DE11A32425B00C8CADA /* BadHunterTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadHunterTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6D6DE51A32425B00C8CADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF6D6DE61A32425B00C8CADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF6D6DE81A32425B00C8CADA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF6D6DE91A32425B00C8CADA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF6D6DEC1A32425B00C8CADA /* BadHunterTDD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BadHunterTDD.xcdatamodel; sourceTree = "<group>"; };
+		CF6D6DEE1A32425B00C8CADA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		CF6D6DEF1A32425B00C8CADA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		CF6D6DF11A32425B00C8CADA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CF6D6DF21A32425B00C8CADA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CF6D6DF51A32425B00C8CADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF6D6DF71A32425B00C8CADA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF6D6DFA1A32425B00C8CADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CF6D6E001A32425B00C8CADA /* BadHunterTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadHunterTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6D6E051A32425B00C8CADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadHunterTDDTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF6D6DDE1A32425B00C8CADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6D6DFD1A32425B00C8CADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF6D6DD81A32425B00C8CADA = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DE31A32425B00C8CADA /* BadHunterTDD */,
+				CF6D6E031A32425B00C8CADA /* BadHunterTDDTests */,
+				CF6D6DE21A32425B00C8CADA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF6D6DE21A32425B00C8CADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DE11A32425B00C8CADA /* BadHunterTDD.app */,
+				CF6D6E001A32425B00C8CADA /* BadHunterTDDTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF6D6DE31A32425B00C8CADA /* BadHunterTDD */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DE81A32425B00C8CADA /* AppDelegate.h */,
+				CF6D6DE91A32425B00C8CADA /* AppDelegate.m */,
+				CF6D6DEE1A32425B00C8CADA /* MasterViewController.h */,
+				CF6D6DEF1A32425B00C8CADA /* MasterViewController.m */,
+				CF6D6DF11A32425B00C8CADA /* DetailViewController.h */,
+				CF6D6DF21A32425B00C8CADA /* DetailViewController.m */,
+				CF6D6DF41A32425B00C8CADA /* Main.storyboard */,
+				CF6D6DF71A32425B00C8CADA /* Images.xcassets */,
+				CF6D6DF91A32425B00C8CADA /* LaunchScreen.xib */,
+				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
+				CF6D6DE41A32425B00C8CADA /* Supporting Files */,
+			);
+			path = BadHunterTDD;
+			sourceTree = "<group>";
+		};
+		CF6D6DE41A32425B00C8CADA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DE51A32425B00C8CADA /* Info.plist */,
+				CF6D6DE61A32425B00C8CADA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF6D6E031A32425B00C8CADA /* BadHunterTDDTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */,
+				CF6D6E041A32425B00C8CADA /* Supporting Files */,
+			);
+			path = BadHunterTDDTests;
+			sourceTree = "<group>";
+		};
+		CF6D6E041A32425B00C8CADA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6E051A32425B00C8CADA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF6D6DE01A32425B00C8CADA /* BadHunterTDD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6D6E0A1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDD" */;
+			buildPhases = (
+				CF6D6DDD1A32425B00C8CADA /* Sources */,
+				CF6D6DDE1A32425B00C8CADA /* Frameworks */,
+				CF6D6DDF1A32425B00C8CADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BadHunterTDD;
+			productName = BadHunterTDD;
+			productReference = CF6D6DE11A32425B00C8CADA /* BadHunterTDD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF6D6DFF1A32425B00C8CADA /* BadHunterTDDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6D6E0D1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDDTests" */;
+			buildPhases = (
+				CF6D6DFC1A32425B00C8CADA /* Sources */,
+				CF6D6DFD1A32425B00C8CADA /* Frameworks */,
+				CF6D6DFE1A32425B00C8CADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF6D6E021A32425B00C8CADA /* PBXTargetDependency */,
+			);
+			name = BadHunterTDDTests;
+			productName = BadHunterTDDTests;
+			productReference = CF6D6E001A32425B00C8CADA /* BadHunterTDDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF6D6DD91A32425B00C8CADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = PoWWaU;
+				TargetAttributes = {
+					CF6D6DE01A32425B00C8CADA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CF6D6DFF1A32425B00C8CADA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CF6D6DE01A32425B00C8CADA;
+					};
+				};
+			};
+			buildConfigurationList = CF6D6DDC1A32425B00C8CADA /* Build configuration list for PBXProject "BadHunterTDD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF6D6DD81A32425B00C8CADA;
+			productRefGroup = CF6D6DE21A32425B00C8CADA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF6D6DE01A32425B00C8CADA /* BadHunterTDD */,
+				CF6D6DFF1A32425B00C8CADA /* BadHunterTDDTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF6D6DDF1A32425B00C8CADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6D6DF61A32425B00C8CADA /* Main.storyboard in Resources */,
+				CF6D6DFB1A32425B00C8CADA /* LaunchScreen.xib in Resources */,
+				CF6D6DF81A32425B00C8CADA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6D6DFE1A32425B00C8CADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF6D6DDD1A32425B00C8CADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6D6DF31A32425B00C8CADA /* DetailViewController.m in Sources */,
+				CF6D6DF01A32425B00C8CADA /* MasterViewController.m in Sources */,
+				CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
+				CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */,
+				CF6D6DE71A32425B00C8CADA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6D6DFC1A32425B00C8CADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6D6E071A32425B00C8CADA /* BadHunterTDDTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF6D6E021A32425B00C8CADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF6D6DE01A32425B00C8CADA /* BadHunterTDD */;
+			targetProxy = CF6D6E011A32425B00C8CADA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF6D6DF41A32425B00C8CADA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6D6DF51A32425B00C8CADA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF6D6DF91A32425B00C8CADA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6D6DFA1A32425B00C8CADA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF6D6E081A32425B00C8CADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF6D6E091A32425B00C8CADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF6D6E0B1A32425B00C8CADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BadHunterTDD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF6D6E0C1A32425B00C8CADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BadHunterTDD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF6D6E0E1A32425B00C8CADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BadHunterTDDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadHunterTDD.app/BadHunterTDD";
+			};
+			name = Debug;
+		};
+		CF6D6E0F1A32425B00C8CADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BadHunterTDDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadHunterTDD.app/BadHunterTDD";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF6D6DDC1A32425B00C8CADA /* Build configuration list for PBXProject "BadHunterTDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6D6E081A32425B00C8CADA /* Debug */,
+				CF6D6E091A32425B00C8CADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6D6E0A1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6D6E0B1A32425B00C8CADA /* Debug */,
+				CF6D6E0C1A32425B00C8CADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF6D6E0D1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6D6E0E1A32425B00C8CADA /* Debug */,
+				CF6D6E0F1A32425B00C8CADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF6D6DEC1A32425B00C8CADA /* BadHunterTDD.xcdatamodel */,
+			);
+			currentVersion = CF6D6DEC1A32425B00C8CADA /* BadHunterTDD.xcdatamodel */;
+			path = BadHunterTDD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF6D6DD91A32425B00C8CADA /* Project object */;
+}
