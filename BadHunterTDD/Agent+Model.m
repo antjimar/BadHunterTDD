@@ -26,7 +26,10 @@ NSString *const agentEntityName = @"Agent";
 #pragma mark - Custom getters & setters
 
 - (NSNumber *) appraisal {
-    return @3;
+    NSUInteger destrPowerValue = [self.destructionPower unsignedIntegerValue];
+    NSUInteger motivationValue = [self.motivation unsignedIntegerValue];
+    NSUInteger appraisalValue = (destrPowerValue + motivationValue) / 2;
+    return @(appraisalValue);
 }
 
 @end

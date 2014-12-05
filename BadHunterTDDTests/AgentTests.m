@@ -101,7 +101,16 @@
     sut.motivation = @4;
     
     XCTAssertEqual([sut.appraisal unsignedIntegerValue], (NSUInteger)3,
-                   @"Appraisal should be calculated from destruction power and motivation");
+                   @"Appraisal should be calculated from destruction power and motivation.");
+}
+
+
+- (void) testAppraisalValueIsCalculatedFromOtherDestPowerAndMotivation {
+    sut.destructionPower = @1;
+    sut.motivation = @2;
+    
+    XCTAssertEqual([sut.appraisal unsignedIntegerValue], (NSUInteger)1,
+                   @"Appraisal should be calculated from destruction power and motivation.");
 }
 
 @end
