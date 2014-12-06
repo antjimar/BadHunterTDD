@@ -19,7 +19,11 @@
 		CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E171A32485900C8CADA /* Agent+Model.m */; };
 		CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E191A3248B000C8CADA /* AgentTests.m */; };
 		CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
-		CF6D6E231A334ADB00C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E221A334ADB00C8CADA /* Agent.m */; };
+		CF6D6E261A3396BF00C8CADA /* Domain.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E251A3396BF00C8CADA /* Domain.m */; };
+		CF6D6E291A3396C000C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E281A3396C000C8CADA /* Agent.m */; };
+		CF6D6E2C1A3396C000C8CADA /* FreakType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E2B1A3396C000C8CADA /* FreakType.m */; };
+		CF6D6E2E1A33979000C8CADA /* FreakTypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */; };
+		CF6D6E311A3397DF00C8CADA /* FreakType+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +57,15 @@
 		CF6D6E161A32485900C8CADA /* Agent+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Agent+Model.h"; sourceTree = "<group>"; };
 		CF6D6E171A32485900C8CADA /* Agent+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Agent+Model.m"; sourceTree = "<group>"; };
 		CF6D6E191A3248B000C8CADA /* AgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgentTests.m; sourceTree = "<group>"; };
-		CF6D6E211A334ADB00C8CADA /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
-		CF6D6E221A334ADB00C8CADA /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
+		CF6D6E241A3396BF00C8CADA /* Domain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		CF6D6E251A3396BF00C8CADA /* Domain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Domain.m; sourceTree = "<group>"; };
+		CF6D6E271A3396C000C8CADA /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
+		CF6D6E281A3396C000C8CADA /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
+		CF6D6E2A1A3396C000C8CADA /* FreakType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreakType.h; sourceTree = "<group>"; };
+		CF6D6E2B1A3396C000C8CADA /* FreakType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreakType.m; sourceTree = "<group>"; };
+		CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreakTypeTests.m; sourceTree = "<group>"; };
+		CF6D6E2F1A3397DF00C8CADA /* FreakType+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FreakType+Model.h"; sourceTree = "<group>"; };
+		CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FreakType+Model.m"; sourceTree = "<group>"; };
 		E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadHunterTDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,11 +188,17 @@
 		CF6D6E121A32480600C8CADA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF6D6E211A334ADB00C8CADA /* Agent.h */,
-				CF6D6E221A334ADB00C8CADA /* Agent.m */,
+				CF6D6E271A3396C000C8CADA /* Agent.h */,
+				CF6D6E281A3396C000C8CADA /* Agent.m */,
 				CF6D6E161A32485900C8CADA /* Agent+Model.h */,
 				CF6D6E171A32485900C8CADA /* Agent+Model.m */,
 				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
+				CF6D6E241A3396BF00C8CADA /* Domain.h */,
+				CF6D6E251A3396BF00C8CADA /* Domain.m */,
+				CF6D6E2A1A3396C000C8CADA /* FreakType.h */,
+				CF6D6E2B1A3396C000C8CADA /* FreakType.m */,
+				CF6D6E2F1A3397DF00C8CADA /* FreakType+Model.h */,
+				CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -190,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6D6E191A3248B000C8CADA /* AgentTests.m */,
+				CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,13 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6D6E2C1A3396C000C8CADA /* FreakType.m in Sources */,
 				CF6D6DF31A32425B00C8CADA /* DetailViewController.m in Sources */,
+				CF6D6E291A3396C000C8CADA /* Agent.m in Sources */,
 				CF6D6DF01A32425B00C8CADA /* MasterViewController.m in Sources */,
 				CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */,
+				CF6D6E261A3396BF00C8CADA /* Domain.m in Sources */,
 				CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
+				CF6D6E311A3397DF00C8CADA /* FreakType+Model.m in Sources */,
 				CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */,
 				CF6D6DE71A32425B00C8CADA /* main.m in Sources */,
-				CF6D6E231A334ADB00C8CADA /* Agent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6D6E2E1A33979000C8CADA /* FreakTypeTests.m in Sources */,
 				CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */,
 			);
