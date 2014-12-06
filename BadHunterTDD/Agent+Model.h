@@ -20,4 +20,6 @@ extern NSString *const agentPropertyMotivation;
 + (NSSet *) keyPathsForValuesAffectingAppraisal;
 + (instancetype) agentInMOC:(NSManagedObjectContext *)moc;
 
+- (NSString *) generatePictureUUID;
+
 @end

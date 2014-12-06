@@ -46,4 +46,11 @@ NSString *const agentPropertyMotivation = @"motivation";
     return @(appraisalValue);
 }
 
+
+#pragma mark - Picture logic
+
+- (NSString *) generatePictureUUID {
+    return @"";
+}
+
 @end

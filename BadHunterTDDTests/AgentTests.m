@@ -96,6 +96,8 @@
 }
 
 
+#pragma mark - Appraisal
+
 - (void) testAppraisalValueIsCalculatedFromDestPowerAndMotivation {
     sut.destructionPower = @3;
     sut.motivation = @4;
@@ -147,6 +149,13 @@
     
     XCTAssertTrue([dependencies containsObject:agentPropertyMotivation],
                   @"Appraisal dependencies must include motivation.");
+}
+
+
+#pragma mark - Picture logic
+
+- (void) testGeneratedPictureUUIDIsNotNil {
+    XCTAssertNotNil([sut generatePictureUUID], @"Generated picture UUID must not be nil.");
 }
 
 @end
