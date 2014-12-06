@@ -23,5 +23,6 @@ extern NSString *const agentPropertyMotivation;
 
 - (NSString *) generatePictureUUID;
 + (NSFetchRequest *) fetchForAllAgents;
++ (NSFetchRequest *) fetchForAllAgentsWithSortDescriptors:(NSArray *)sortDescriptors;
 
 @end

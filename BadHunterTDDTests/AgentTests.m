@@ -198,7 +198,35 @@
     
     NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
     XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
-                          @"Fetch for all agents must be sorted by name first.");
+                          @"Fetch for all agents with sort descriptors must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgentsWithSortDescriptors:nil]);
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:nil];
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents with sort descriptors queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsBatchWithSortDescriptorsIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:nil];
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents with sort descriptors batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsUsesProvidedSortDescriptors {
+    NSSortDescriptor *nameSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    NSArray *sortDescriptors = @[nameSortDescriptor];
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:sortDescriptors];
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors, sortDescriptors,
+                          @"Fetch for all agents with sort descriptors must be sorted by name first.");
 }
 
 @end
