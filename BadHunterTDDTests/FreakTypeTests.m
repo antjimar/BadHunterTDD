@@ -19,6 +19,8 @@
     NSManagedObjectContext *context;
     // Object to test.
     FreakType *sut;
+    // Other objects
+    FreakType *freakType1;
 }
 
 @end
@@ -57,7 +59,7 @@ static NSString *const freakTypeAltName = @"Type2";
 
 
 - (void) createFixture {
-    // Test data
+    freakType1 = [FreakType freakTypeInMOC:context withName:freakTypeAltName];
 }
 
 
@@ -81,7 +83,7 @@ static NSString *const freakTypeAltName = @"Type2";
 
 
 - (void) releaseFixture {
-
+    freakType1 = nil;
 }
 
 
@@ -99,6 +101,8 @@ static NSString *const freakTypeAltName = @"Type2";
     XCTAssertNotNil(sut, @"The object to test must be created in setUp.");
 }
 
+#pragma mark - Data persistence
+
 
 - (void) testConvenienceConstructorPreservesName {
     XCTAssertEqualObjects(sut.name, freakTypeMainName,
@@ -110,6 +114,15 @@ static NSString *const freakTypeAltName = @"Type2";
     FreakType *altSut = [FreakType freakTypeInMOC:context withName:freakTypeAltName];
     XCTAssertEqualObjects(altSut.name, freakTypeAltName,
                           @"FreakType convenience constructor must preserve name.");
+}
+
+
+#pragma mark - Fetches
+
+- (void) testFetchesFreakTypeWithGivenName {
+    // Another FreakType is created in the fixture.
+    XCTAssertEqual([FreakType fetchInMOC:context withName:freakTypeMainName], sut,
+                   @"Fetch FreakType with name must retrieve the right object.");
 }
 
 @end

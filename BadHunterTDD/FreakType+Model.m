@@ -10,6 +10,7 @@
 #import "FreakType+Model.h"
 
 NSString *const freakTypeEntityName = @"FreakType";
+NSString *const freakTypePropertyName = @"name";
 
 
 
@@ -23,6 +24,17 @@ NSString *const freakTypeEntityName = @"FreakType";
     freakType.name = name;
     
     return freakType;
+}
+
+
+#pragma mark - Fetches
+
++ (FreakType *) fetchInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:freakTypeEntityName];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%K == %@", freakTypePropertyName, name];
+    NSArray *results = [moc executeFetchRequest:fetchRequest error:NULL];
+    
+    return [results lastObject];
 }
 
 @end
