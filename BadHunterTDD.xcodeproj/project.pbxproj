@@ -24,6 +24,8 @@
 		CF6D6E2C1A3396C000C8CADA /* FreakType.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E2B1A3396C000C8CADA /* FreakType.m */; };
 		CF6D6E2E1A33979000C8CADA /* FreakTypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */; };
 		CF6D6E311A3397DF00C8CADA /* FreakType+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */; };
+		CF6D6E341A339F3800C8CADA /* Domain+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E331A339F3800C8CADA /* Domain+Model.m */; };
+		CF6D6E361A339F8800C8CADA /* DomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E351A339F8800C8CADA /* DomainTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,9 @@
 		CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreakTypeTests.m; sourceTree = "<group>"; };
 		CF6D6E2F1A3397DF00C8CADA /* FreakType+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FreakType+Model.h"; sourceTree = "<group>"; };
 		CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FreakType+Model.m"; sourceTree = "<group>"; };
+		CF6D6E321A339F3800C8CADA /* Domain+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Domain+Model.h"; sourceTree = "<group>"; };
+		CF6D6E331A339F3800C8CADA /* Domain+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Domain+Model.m"; sourceTree = "<group>"; };
+		CF6D6E351A339F8800C8CADA /* DomainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomainTests.m; sourceTree = "<group>"; };
 		E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadHunterTDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +200,8 @@
 				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
 				CF6D6E241A3396BF00C8CADA /* Domain.h */,
 				CF6D6E251A3396BF00C8CADA /* Domain.m */,
+				CF6D6E321A339F3800C8CADA /* Domain+Model.h */,
+				CF6D6E331A339F3800C8CADA /* Domain+Model.m */,
 				CF6D6E2A1A3396C000C8CADA /* FreakType.h */,
 				CF6D6E2B1A3396C000C8CADA /* FreakType.m */,
 				CF6D6E2F1A3397DF00C8CADA /* FreakType+Model.h */,
@@ -208,6 +215,7 @@
 			children = (
 				CF6D6E191A3248B000C8CADA /* AgentTests.m */,
 				CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */,
+				CF6D6E351A339F8800C8CADA /* DomainTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 				CF6D6E291A3396C000C8CADA /* Agent.m in Sources */,
 				CF6D6DF01A32425B00C8CADA /* MasterViewController.m in Sources */,
 				CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */,
+				CF6D6E341A339F3800C8CADA /* Domain+Model.m in Sources */,
 				CF6D6E261A3396BF00C8CADA /* Domain.m in Sources */,
 				CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6E311A3397DF00C8CADA /* FreakType+Model.m in Sources */,
@@ -367,6 +376,7 @@
 				CF6D6E2E1A33979000C8CADA /* FreakTypeTests.m in Sources */,
 				CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */,
+				CF6D6E361A339F8800C8CADA /* DomainTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
