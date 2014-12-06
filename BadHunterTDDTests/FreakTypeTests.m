@@ -29,6 +29,7 @@
 #pragma mark - Constants & Parameters
 
 static NSString *const freakTypeMainName = @"Type1";
+static NSString *const freakTypeAltName = @"Type2";
 
 #pragma mark - Set up and tear down
 
@@ -101,6 +102,13 @@ static NSString *const freakTypeMainName = @"Type1";
 
 - (void) testConvenienceConstructorPreservesName {
     XCTAssertEqualObjects(sut.name, freakTypeMainName,
+                          @"FreakType convenience constructor must preserve name.");
+}
+
+
+- (void) testConvenienceConstructorPreservesAnotherName {
+    FreakType *altSut = [FreakType freakTypeInMOC:context withName:freakTypeAltName];
+    XCTAssertEqualObjects(altSut.name, freakTypeAltName,
                           @"FreakType convenience constructor must preserve name.");
 }
 

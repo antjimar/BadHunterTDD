@@ -20,7 +20,7 @@ NSString *const freakTypeEntityName = @"FreakType";
 + (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
     FreakType *freakType = [NSEntityDescription insertNewObjectForEntityForName:freakTypeEntityName
                                                          inManagedObjectContext:moc];
-    freakType.name = @"Type1";
+    freakType.name = name;
     
     return freakType;
 }
