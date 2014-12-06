@@ -198,7 +198,7 @@
     
     NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
     XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
-                          @"Fetch for all agents with sort descriptors must be sorted by name first.");
+                          @"Fetch for all agents must be sorted by name first.");
 }
 
 
@@ -227,6 +227,48 @@
     NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:sortDescriptors];
     XCTAssertEqualObjects(fetchRequest.sortDescriptors, sortDescriptors,
                           @"Fetch for all agents with sort descriptors must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgentsWithPredicate:nil],
+                    @"Fetch for all the agents with predicate must return a not nil request.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents with predicate queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateBatchIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents with predicate batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateSortsByName {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
+                          @"Fetch for all agents with predicate  must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateUsesProvidedPredicate {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", agentPropertyDestructionPower, @2];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:predicate];
+    
+    XCTAssertEqualObjects(fetchRequest.predicate, predicate,
+                          @"Fetch for all agents with predicate must use the provided predicate.");
 }
 
 @end

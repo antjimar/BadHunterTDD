@@ -84,4 +84,12 @@ NSString *const agentPropertyMotivation = @"motivation";
     return fetchRequest;
 }
 
+
++ (NSFetchRequest *) fetchForAllAgentsWithPredicate:(NSPredicate *)predicate {
+    NSFetchRequest *fetchRequest = [self fetchForAllAgents];
+    fetchRequest.predicate = predicate;
+    
+    return fetchRequest;
+}
+
 @end
