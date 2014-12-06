@@ -10,7 +10,9 @@
 #import "Agent+Model.h"
 
 NSString *const agentEntityName = @"Agent";
-
+NSString *const agentPropertyAppraisal = @"appraisal";
+NSString *const agentPropertyDestructionPower = @"destructionPower";
+NSString *const agentPropertyMotivation = @"motivation";
 
 @implementation Agent (Model)
 
@@ -26,9 +28,14 @@ NSString *const agentEntityName = @"Agent";
 #pragma mark - Custom getters & setters
 
 - (NSNumber *) appraisal {
-    NSUInteger destrPowerValue = [self.destructionPower unsignedIntegerValue];
-    NSUInteger motivationValue = [self.motivation unsignedIntegerValue];
+    [self willAccessValueForKey:agentPropertyAppraisal];
+//    NSUInteger destrPowerValue = [self.destructionPower unsignedIntegerValue];
+    NSUInteger destrPowerValue = [[self valueForKey:agentPropertyDestructionPower] unsignedIntegerValue];
+//    NSUInteger motivationValue = [self.motivation unsignedIntegerValue];
+    NSUInteger motivationValue = [[self valueForKey:agentPropertyMotivation] unsignedIntegerValue];
     NSUInteger appraisalValue = (destrPowerValue + motivationValue) / 2;
+    [self didAccessValueForKey:agentPropertyAppraisal];
+
     return @(appraisalValue);
 }
 
