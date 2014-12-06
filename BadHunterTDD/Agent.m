@@ -2,7 +2,7 @@
 //  Agent.m
 //  BadHunterTDD
 //
-//  Created by Jorge D. Ortiz Fuentes on 5/12/14.
+//  Created by Jorge D. Ortiz Fuentes on 6/12/14.
 //  Copyright (c) 2014 PoWWaU. All rights reserved.
 //
 
@@ -11,9 +11,10 @@
 
 @implementation Agent
 
-@dynamic name;
+@dynamic appraisal;
 @dynamic destructionPower;
 @dynamic motivation;
-@dynamic appraisal;
+@dynamic name;
+@dynamic pictureUUID;
 
 @end

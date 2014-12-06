@@ -19,7 +19,7 @@
 		CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E171A32485900C8CADA /* Agent+Model.m */; };
 		CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E191A3248B000C8CADA /* AgentTests.m */; };
 		CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
-		CF6D6E201A32666D00C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E1F1A32666D00C8CADA /* Agent.m */; };
+		CF6D6E231A334ADB00C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E221A334ADB00C8CADA /* Agent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		CF6D6E161A32485900C8CADA /* Agent+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Agent+Model.h"; sourceTree = "<group>"; };
 		CF6D6E171A32485900C8CADA /* Agent+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Agent+Model.m"; sourceTree = "<group>"; };
 		CF6D6E191A3248B000C8CADA /* AgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgentTests.m; sourceTree = "<group>"; };
-		CF6D6E1E1A32666D00C8CADA /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
-		CF6D6E1F1A32666D00C8CADA /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
+		CF6D6E211A334ADB00C8CADA /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
+		CF6D6E221A334ADB00C8CADA /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
 		E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadHunterTDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,11 +177,11 @@
 		CF6D6E121A32480600C8CADA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CF6D6E1E1A32666D00C8CADA /* Agent.h */,
-				CF6D6E1F1A32666D00C8CADA /* Agent.m */,
-				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
+				CF6D6E211A334ADB00C8CADA /* Agent.h */,
+				CF6D6E221A334ADB00C8CADA /* Agent.m */,
 				CF6D6E161A32485900C8CADA /* Agent+Model.h */,
 				CF6D6E171A32485900C8CADA /* Agent+Model.m */,
+				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */,
 				CF6D6DE71A32425B00C8CADA /* main.m in Sources */,
-				CF6D6E201A32666D00C8CADA /* Agent.m in Sources */,
+				CF6D6E231A334ADB00C8CADA /* Agent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

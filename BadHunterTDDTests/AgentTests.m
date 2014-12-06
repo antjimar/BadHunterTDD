@@ -158,4 +158,17 @@
     XCTAssertNotNil([sut generatePictureUUID], @"Generated picture UUID must not be nil.");
 }
 
+
+- (void) testGeneratedPictureUUIDIsLongerThanTen {
+    XCTAssertTrue([[sut generatePictureUUID] length] > 10,
+                  @"Generated picture UUID length must be longer than 10.");
+}
+
+
+- (void) testGeneratedPictureUUIDMustBeDifferentEachTime {
+    NSString *uuid1 = [sut generatePictureUUID];
+    NSString *uuid2 = [sut generatePictureUUID];
+    XCTAssertNotEqualObjects(uuid1, uuid2, @"Generated picture UUID must be different each time.");
+}
+
 @end
