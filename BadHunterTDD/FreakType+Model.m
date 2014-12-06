@@ -18,8 +18,11 @@ NSString *const freakTypeEntityName = @"FreakType";
 #pragma mark - Convenience constructor
 
 + (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
-    return [NSEntityDescription insertNewObjectForEntityForName:freakTypeEntityName
-                                         inManagedObjectContext:moc];
+    FreakType *freakType = [NSEntityDescription insertNewObjectForEntityForName:freakTypeEntityName
+                                                         inManagedObjectContext:moc];
+    freakType.name = @"Type1";
+    
+    return freakType;
 }
 
 @end

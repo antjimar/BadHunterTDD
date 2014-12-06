@@ -26,6 +26,10 @@
 
 @implementation FreakTypeTests
 
+#pragma mark - Constants & Parameters
+
+static NSString *const freakTypeMainName = @"Type1";
+
 #pragma mark - Set up and tear down
 
 - (void) setUp {
@@ -57,7 +61,7 @@
 
 
 - (void) createSut {
-    sut = [FreakType freakTypeInMOC:context withName:nil];
+    sut = [FreakType freakTypeInMOC:context withName:freakTypeMainName];
 }
 
 
@@ -92,6 +96,12 @@
 
 - (void) testObjectIsNotNil {
     XCTAssertNotNil(sut, @"The object to test must be created in setUp.");
+}
+
+
+- (void) testConvenienceConstructorPreservesName {
+    XCTAssertEqualObjects(sut.name, freakTypeMainName,
+                          @"FreakType convenience constructor must preserve name.");
 }
 
 @end
