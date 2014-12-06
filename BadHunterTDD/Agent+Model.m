@@ -61,8 +61,7 @@ NSString *const agentPropertyMotivation = @"motivation";
 #pragma mark - Fetch requests
 
 + (NSFetchRequest *) fetchForAllAgents {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:agentEntityName];
-    fetchRequest.fetchBatchSize = 20;
+    NSFetchRequest *fetchRequest = [self baseFetchRequest];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
     fetchRequest.sortDescriptors = @[sortDescriptor];
 
@@ -71,10 +70,17 @@ NSString *const agentPropertyMotivation = @"motivation";
 
 
 + (NSFetchRequest *) fetchForAllAgentsWithSortDescriptors:(NSArray *)sortDescriptors {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:agentEntityName];
-    fetchRequest.fetchBatchSize = 20;
+    NSFetchRequest *fetchRequest = [self baseFetchRequest];
     fetchRequest.sortDescriptors = sortDescriptors;
     
+    return fetchRequest;
+}
+
+
++ (NSFetchRequest *) baseFetchRequest {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:agentEntityName];
+    fetchRequest.fetchBatchSize = 20;
+
     return fetchRequest;
 }
 
