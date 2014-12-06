@@ -17,6 +17,7 @@ extern NSString *const agentPropertyMotivation;
 
 @interface Agent (Model)
 
++ (NSSet *) keyPathsForValuesAffectingAppraisal;
 + (instancetype) agentInMOC:(NSManagedObjectContext *)moc;
 
 @end

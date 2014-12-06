@@ -25,6 +25,13 @@ NSString *const agentPropertyMotivation = @"motivation";
 }
 
 
+#pragma mark - Dependencies
+
++ (NSSet *) keyPathsForValuesAffectingAppraisal {
+    return [NSSet setWithArray:@[agentPropertyDestructionPower, agentPropertyMotivation]];
+}
+
+
 #pragma mark - Custom getters & setters
 
 - (NSNumber *) appraisal {

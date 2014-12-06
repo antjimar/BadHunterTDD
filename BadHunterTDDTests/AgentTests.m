@@ -126,4 +126,27 @@
     XCTAssertNoThrow(OCMVerifyAll(sutMock), @"Appraisal access must be notified.");
 }
 
+
+- (void) testAppraisalDependenciesAreDeclared {
+    NSSet *dependencies = [Agent keyPathsForValuesAffectingAppraisal];
+
+    XCTAssertNotNil(dependencies, @"Appraisal dependencies must be declared in the model.");
+}
+
+
+- (void) testAppraisalDependenciesIncludesDestructionPower {
+    NSSet *dependencies = [Agent keyPathsForValuesAffectingAppraisal];
+    
+    XCTAssertTrue([dependencies containsObject:agentPropertyDestructionPower],
+                  @"Appraisal dependencies must include destruction power.");
+}
+
+
+- (void) testAppraisalDependenciesIncludesMotivation {
+    NSSet *dependencies = [Agent keyPathsForValuesAffectingAppraisal];
+    
+    XCTAssertTrue([dependencies containsObject:agentPropertyMotivation],
+                  @"Appraisal dependencies must include motivation.");
+}
+
 @end
