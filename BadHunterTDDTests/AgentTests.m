@@ -175,7 +175,30 @@
 #pragma mark - Fetch requests
 
 - (void) testFetchForAllAgentsIsNotNil {
-    XCTAssertNotNil([Agent fetchForAllAgents], @"Fetch all the agents must return a not nil request.");
+    XCTAssertNotNil([Agent fetchForAllAgents], @"Fetch for all the agents must return a not nil request.");
+}
+
+
+- (void) testFetchForAllAgentsQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsBatchIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsSortsByName {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
+                          @"Fetch for all agents must be sorted by name first.");
 }
 
 @end

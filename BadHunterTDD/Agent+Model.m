@@ -10,6 +10,7 @@
 #import "Agent+Model.h"
 
 NSString *const agentEntityName = @"Agent";
+NSString *const agentPropertyName = @"name";
 NSString *const agentPropertyAppraisal = @"appraisal";
 NSString *const agentPropertyDestructionPower = @"destructionPower";
 NSString *const agentPropertyMotivation = @"motivation";
@@ -60,7 +61,12 @@ NSString *const agentPropertyMotivation = @"motivation";
 #pragma mark - Fetch requests
 
 + (NSFetchRequest *) fetchForAllAgents {
-    return [[NSFetchRequest alloc] init];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:agentEntityName];
+    fetchRequest.fetchBatchSize = 20;
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+
+    return fetchRequest;
 }
 
 @end
