@@ -171,4 +171,11 @@
     XCTAssertNotEqualObjects(uuid1, uuid2, @"Generated picture UUID must be different each time.");
 }
 
+
+#pragma mark - Fetch requests
+
+- (void) testFetchForAllAgentsIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgents], @"Fetch all the agents must return a not nil request.");
+}
+
 @end

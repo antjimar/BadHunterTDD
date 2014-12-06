@@ -56,4 +56,11 @@ NSString *const agentPropertyMotivation = @"motivation";
     return (__bridge_transfer NSString *)fileUUIDString;
 }
 
+
+#pragma mark - Fetch requests
+
++ (NSFetchRequest *) fetchForAllAgents {
+    return [[NSFetchRequest alloc] init];
+}
+
 @end

@@ -21,5 +21,6 @@ extern NSString *const agentPropertyMotivation;
 + (instancetype) agentInMOC:(NSManagedObjectContext *)moc;
 
 - (NSString *) generatePictureUUID;
++ (NSFetchRequest *) fetchForAllAgents;
 
 @end
