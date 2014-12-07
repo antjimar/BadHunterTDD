@@ -313,13 +313,27 @@
     [sut validateName:&name error:&error];
     
     XCTAssertNotNil(error, @"An error must be returned when name is not validated.");
-    XCTAssertEqual(error.code, AgentErrorCodeNameEmpty, @"Appropiate error code must be returned when name is not validated.");
+    XCTAssertEqual(error.code, AgentErrorCodeNameEmpty,
+                   @"Appropiate error code must be returned when name is not validated.");
 }
 
 
 - (void) testAgentNameNullPointertDoesntThrowException {
-    XCTAssertNoThrow([sut validateName:NULL error:NULL],
+    NSError *error;
+
+    XCTAssertNoThrow([sut validateName:NULL error:&error],
                      @"Nil agent name must not be allowed when validating.");
+}
+
+
+- (void) testAgentNameNullPointerValidationReturnsAppropiateError {
+    NSError *error;
+    
+    [sut validateName:nil error:&error];
+    
+    XCTAssertNotNil(error, @"An error must be returned when name is not validated.");
+    XCTAssertEqual(error.code, AgentErrorCodeNameNotDefined,
+                   @"Appropiate error code must be returned when name pointer is NULL.");
 }
 
 @end

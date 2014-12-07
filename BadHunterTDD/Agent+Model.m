@@ -73,6 +73,9 @@ NSString *const agentErrorDomain = @"AgentModelError";
             *error = [NSError errorWithDomain:agentErrorDomain
                                          code:AgentErrorCodeNameEmpty userInfo:nil];
         }
+    } else {
+        *error = [NSError errorWithDomain:agentErrorDomain
+                                     code:AgentErrorCodeNameNotDefined userInfo:nil];
     }
 
     return validated;

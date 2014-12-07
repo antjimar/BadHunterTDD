@@ -10,7 +10,8 @@
 #import "Agent.h"
 
 typedef NS_ENUM(NSUInteger, AgentErrorCode) {
-    AgentErrorCodeNameEmpty = 1
+    AgentErrorCodeNameNotDefined = 1,
+    AgentErrorCodeNameEmpty
 };
 
 
