@@ -25,5 +25,6 @@ extern NSString *const agentPropertyMotivation;
 + (NSFetchRequest *) fetchForAllAgents;
 + (NSFetchRequest *) fetchForAllAgentsWithSortDescriptors:(NSArray *)sortDescriptors;
 + (NSFetchRequest *) fetchForAllAgentsWithPredicate:(NSPredicate *)predicate;
+- (BOOL) validateName:(NSString **)name error:(NSError *__autoreleasing *)error;
 
 @end

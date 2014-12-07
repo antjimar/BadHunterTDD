@@ -58,6 +58,13 @@ NSString *const agentPropertyMotivation = @"motivation";
 }
 
 
+#pragma mark - Validation
+
+- (BOOL) validateName:(NSString **)name error:(NSError *__autoreleasing *)error {
+    return NO;
+}
+
+
 #pragma mark - Fetch requests
 
 + (NSFetchRequest *) fetchForAllAgents {

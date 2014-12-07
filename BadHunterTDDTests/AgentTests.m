@@ -271,4 +271,13 @@
                           @"Fetch for all agents with predicate must use the provided predicate.");
 }
 
+
+#pragma mark - Agent name validation
+
+- (void) testEmptyAgentNameCannotBeSaved {
+    sut.name = @"";
+    
+    XCTAssertFalse([context save:NULL], @"Empty agent name must not be allowed when saving");
+}
+
 @end
