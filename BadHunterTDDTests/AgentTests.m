@@ -287,4 +287,33 @@
     XCTAssertTrue([context save:NULL], @"Non empty agent name must be allowed when saving");
 }
 
+
+- (void) testAgentNameWithOnlySpacesCannotBeSaved {
+    sut.name = @"  ";
+    
+    XCTAssertFalse([context save:NULL], @"Agent name with only spaces must not be allowed when saving");
+}
+
+
+- (void) testNonEmptyAgentNameReturnsNoError {
+    NSError *error = nil;
+    sut.name = @"A";
+
+    [context save:&error];
+    
+    XCTAssertNil(error, @"Non empty agent name must return no error when saving");
+    
+}
+
+
+- (void) testAgentNameWithOnlySpacesValidationReturnsAppropiateError {
+    NSString *name = @" ";
+    NSError *error;
+    
+    [sut validateName:&name error:&error];
+    
+    XCTAssertNotNil(error, @"An error must be returned when name is not validated.");
+    XCTAssertEqual(error.code, AgentErrorCodeNameEmpty, @"Appropiate error code must be returned when name is not validated.");
+}
+
 @end

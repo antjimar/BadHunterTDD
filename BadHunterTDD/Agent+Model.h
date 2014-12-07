@@ -9,6 +9,11 @@
 
 #import "Agent.h"
 
+typedef NS_ENUM(NSUInteger, AgentErrorCode) {
+    AgentErrorCodeNameEmpty = 1
+};
+
+
 extern NSString *const agentEntityName;
 extern NSString *const agentPropertyName;
 extern NSString *const agentPropertyAppraisal;

@@ -14,6 +14,8 @@ NSString *const agentPropertyName = @"name";
 NSString *const agentPropertyAppraisal = @"appraisal";
 NSString *const agentPropertyDestructionPower = @"destructionPower";
 NSString *const agentPropertyMotivation = @"motivation";
+NSString *const agentErrorDomain = @"AgentModelError";
+
 
 @implementation Agent (Model)
 
@@ -63,8 +65,12 @@ NSString *const agentPropertyMotivation = @"motivation";
 
 - (BOOL) validateName:(NSString **)name error:(NSError *__autoreleasing *)error {
     BOOL validated = NO;
-    if ((*name).length > 0) {
+    NSString *nameWithoutSpace = [*name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (nameWithoutSpace.length > 0) {
         validated = YES;
+    } else {
+        *error = [NSError errorWithDomain:agentErrorDomain
+                                     code:AgentErrorCodeNameEmpty userInfo:nil];
     }
 
     return validated;
