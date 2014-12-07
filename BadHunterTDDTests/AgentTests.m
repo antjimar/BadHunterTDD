@@ -316,4 +316,10 @@
     XCTAssertEqual(error.code, AgentErrorCodeNameEmpty, @"Appropiate error code must be returned when name is not validated.");
 }
 
+
+- (void) testAgentNameNullPointertDoesntThrowException {
+    XCTAssertNoThrow([sut validateName:NULL error:NULL],
+                     @"Nil agent name must not be allowed when validating.");
+}
+
 @end

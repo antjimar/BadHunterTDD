@@ -65,12 +65,14 @@ NSString *const agentErrorDomain = @"AgentModelError";
 
 - (BOOL) validateName:(NSString **)name error:(NSError *__autoreleasing *)error {
     BOOL validated = NO;
-    NSString *nameWithoutSpace = [*name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if (nameWithoutSpace.length > 0) {
-        validated = YES;
-    } else {
-        *error = [NSError errorWithDomain:agentErrorDomain
-                                     code:AgentErrorCodeNameEmpty userInfo:nil];
+    if (name != NULL) {
+        NSString *nameWithoutSpace = [*name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        if (nameWithoutSpace.length > 0) {
+            validated = YES;
+        } else {
+            *error = [NSError errorWithDomain:agentErrorDomain
+                                         code:AgentErrorCodeNameEmpty userInfo:nil];
+        }
     }
 
     return validated;
