@@ -280,4 +280,11 @@
     XCTAssertFalse([context save:NULL], @"Empty agent name must not be allowed when saving");
 }
 
+
+- (void) testNonEmptyAgentNameCanBeSaved {
+    sut.name = @"A";
+    
+    XCTAssertTrue([context save:NULL], @"Non empty agent name must be allowed when saving");
+}
+
 @end

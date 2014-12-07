@@ -54,6 +54,7 @@ NSString *const agentPropertyMotivation = @"motivation";
     CFUUIDRef   fileUUID = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef fileUUIDString = CFUUIDCreateString(kCFAllocatorDefault, fileUUID);
     CFRelease(fileUUID);
+
     return (__bridge_transfer NSString *)fileUUIDString;
 }
 
@@ -61,7 +62,12 @@ NSString *const agentPropertyMotivation = @"motivation";
 #pragma mark - Validation
 
 - (BOOL) validateName:(NSString **)name error:(NSError *__autoreleasing *)error {
-    return NO;
+    BOOL validated = NO;
+    if ((*name).length > 0) {
+        validated = YES;
+    }
+
+    return validated;
 }
 
 
