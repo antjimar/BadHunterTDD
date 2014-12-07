@@ -7,17 +7,12 @@
 //
 
 
-#import <XCTest/XCTest.h>
+#import "CoreDataTestCase.h"
 #import "Domain+Model.h"
 #import "Agent+Model.h"
 
 
-@interface DomainTests : XCTestCase {
-    // Core Data stack objects.
-    NSManagedObjectModel *model;
-    NSPersistentStoreCoordinator *coordinator;
-    NSPersistentStore *store;
-    NSManagedObjectContext *context;
+@interface DomainTests : CoreDataTestCase {
     // Object to test.
     Domain *sut;
     // Other objects
@@ -40,29 +35,7 @@ static NSString *const domainAltName = @"domain2";
 - (void) setUp {
     [super setUp];
 
-    [self createCoreDataStack];
-    [self createFixture];
     [self createSut];
-}
-
-
-- (void) createCoreDataStack {
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    model = [NSManagedObjectModel mergedModelFromBundles:@[bundle]];
-    coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
-    store = [coordinator addPersistentStoreWithType: NSInMemoryStoreType
-                                      configuration: nil
-                                                URL: nil
-                                            options: nil
-                                              error: NULL];
-    context = [[NSManagedObjectContext alloc] init];
-    context.persistentStoreCoordinator = coordinator;
-}
-
-
-- (void) createFixture {
-    // Test data
-    domain1 = [Domain domainInMOC:context withName:domainAltName];
 }
 
 
@@ -73,8 +46,6 @@ static NSString *const domainAltName = @"domain2";
 
 - (void) tearDown {
     [self releaseSut];
-    [self releaseFixture];
-    [self releaseCoreDataStack];
 
     [super tearDown];
 }
@@ -82,19 +53,6 @@ static NSString *const domainAltName = @"domain2";
 
 - (void) releaseSut {
     sut = nil;
-}
-
-
-- (void) releaseFixture {
-    domain1 = nil;
-}
-
-
-- (void) releaseCoreDataStack {
-    context = nil;
-    store = nil;
-    coordinator = nil;
-    model = nil;
 }
 
 
