@@ -21,6 +21,9 @@ extern NSString *const agentsKey;
 
 @interface BadHunterDocument : UIManagedDocument
 
+@property (strong, nonatomic) NSFileManager *fileManager;
+@property (strong, nonatomic) NSURL *initialDataURL;
+
 - (void) importData:(NSDictionary *)dictionary;
 
 @end
