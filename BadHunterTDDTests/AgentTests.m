@@ -10,11 +10,18 @@
 #import "CoreDataTestCase.h"
 #import <OCMock/OCMock.h>
 #import "Agent+Model.h"
+#import "FreakType+Model.h"
+#import "Domain+Model.h"
+
 
 
 @interface AgentTests : CoreDataTestCase {
     // Object to test.
     Agent *sut;
+    // Additional data.
+    FreakType *freakTypeMain;
+    Domain *domainMain;
+    Domain *domainAlt;
 }
 
 @end
@@ -27,6 +34,9 @@
 static NSString *const agentMainName = @"Agent0";
 static const NSUInteger agentMainDestructPower = 2;
 static const NSUInteger agentMainMotivation = 4;
+static NSString *const freakTypeMainName = @"Category1";
+static NSString *const domainMainName = @"Domain0";
+static NSString *const domainAltName = @"Domain1";
 
 
 #pragma mark - Set up and tear down
@@ -35,6 +45,13 @@ static const NSUInteger agentMainMotivation = 4;
     [super setUp];
 
     [self createSut];
+}
+
+
+- (void) createFixture {
+    freakTypeMain = [FreakType freakTypeInMOC:context withName:freakTypeMainName];
+    domainMain = [Domain domainInMOC:context withName:domainMainName];
+    domainAlt = [Domain domainInMOC:context withName:domainAltName];
 }
 
 
@@ -52,6 +69,13 @@ static const NSUInteger agentMainMotivation = 4;
 
 - (void) releaseSut {
     sut = nil;
+}
+
+
+- (void) releaseFixture {
+    domainAlt = nil;
+    domainMain = nil;
+    freakTypeMain = nil;
 }
 
 
@@ -88,6 +112,24 @@ static const NSUInteger agentMainMotivation = 4;
     Agent *agent = [Agent agentInMOC:context withDictionary:@{agentPropertyMotivation: @(agentMainMotivation)}];
     XCTAssertEqual([agent.motivation unsignedIntegerValue], agentMainMotivation,
                    @"Agent created with importer constructor must preserve motivation.");
+}
+
+
+#pragma mark - Import relationships
+
+- (void) testImportingInitializerEstablishesRelationshipWithFreakTypeWithName {
+    Agent *agent = [Agent agentInMOC:context withDictionary:@{agentImportPropertyCategory: freakTypeMainName}];
+    XCTAssertEqual(agent.category, freakTypeMain,
+                   @"Agent created with imported must be related to the FreakType with the given name.");
+}
+
+
+- (void) testImportingInitializerEstablishesRelationshipWithDomainsWithNames {
+    Agent *agent = [Agent agentInMOC:context withDictionary:@{agentImportPropertyDomains: @[domainMainName, domainAltName]}];
+    XCTAssertTrue([agent.domains containsObject:domainMain],
+                  @"Agent created with imported must be related to the Domains with the given names.");
+    XCTAssertTrue([agent.domains containsObject:domainAlt],
+                  @"Agent created with imported must be related to the Domains with the given names.");
 }
 
 
