@@ -26,6 +26,8 @@
 
 static NSString *const freakTypeMainName = @"Category0";
 static NSString *const freakTypeAltName = @"Category1";
+static NSString *const domainMainName = @"Domain0";
+static NSString *const domainAltName = @"Domain1";
 
 
 #pragma mark - Set up and tear down
@@ -125,6 +127,47 @@ static NSString *const freakTypeAltName = @"Category1";
     FreakType *freakType = [results lastObject];
     XCTAssertEqualObjects(freakType.name, freakTypeMainName,
                           @"Import data must create FreakTypes with the provided data.");
+}
+
+
+- (void) testImportDataCreatesOneDomainWhenDataContainsOne {
+    NSDictionary *data = @{domainsKey: @[@{domainPropertyName: domainMainName}]};
+    
+    [sut importData:data];
+    
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:domainEntityName]
+                                              error:&error];
+    XCTAssertEqual(results.count, (NSUInteger)1,
+                   @"Import data must create one Domain and only one when that is provided in the data.");
+}
+
+
+- (void) testImportDataCreatesTwoDomainsWhenDataContainsTwo {
+    NSDictionary *data = @{domainsKey: @[@{domainPropertyName: domainMainName},
+                                         @{domainPropertyName: domainAltName}]};
+    
+    [sut importData:data];
+    
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:domainEntityName]
+                                              error:&error];
+    XCTAssertEqual(results.count, (NSUInteger)2,
+                   @"Import data must create two Domains and only two when that is provided in the data.");
+}
+
+
+- (void) testImportDataCreatesADomainWithDataInItsDictionary {
+    NSDictionary *data = @{domainsKey: @[@{domainPropertyName: domainMainName}]};
+    
+    [sut importData:data];
+    
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:domainEntityName]
+                                              error:&error];
+    Domain *domain = [results lastObject];
+    XCTAssertEqualObjects(domain.name, domainMainName,
+                          @"Import data must create Domains with the provided data.");
 }
 
 @end
