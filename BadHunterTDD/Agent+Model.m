@@ -28,6 +28,19 @@ NSString *const agentErrorDomain = @"AgentModelError";
 }
 
 
+#pragma mark - Convenience constructor for importing 
+
++ (instancetype) agentInMOC:(NSManagedObjectContext *)moc withDictionary:(NSDictionary *)dict {
+    Agent *agent = [NSEntityDescription insertNewObjectForEntityForName:agentEntityName
+                                                 inManagedObjectContext:moc];
+    agent.name = dict[agentPropertyName];
+    agent.destructionPower = dict[agentPropertyDestructionPower];
+    agent.motivation = dict[agentPropertyMotivation];
+
+    return agent;
+}
+
+
 #pragma mark - Dependencies
 
 + (NSSet *) keyPathsForValuesAffectingAppraisal {

@@ -22,6 +22,13 @@
 
 @implementation AgentTests
 
+#pragma mark - Constants & Parameters
+
+static NSString *const agentMainName = @"Agent0";
+static const NSUInteger agentMainDestructPower = 2;
+static const NSUInteger agentMainMotivation = 4;
+
+
 #pragma mark - Set up and tear down
 
 - (void) setUp {
@@ -52,6 +59,35 @@
 
 - (void) testObjectIsNotNil {
     XCTAssertNotNil(sut, @"The object to test must be created in setUp.");
+}
+
+
+#pragma mark - Importing data
+
+- (void) testNotNilAgentIsCreatedWithImportingInitializer {
+    XCTAssertNotNil([Agent agentInMOC:context withDictionary:nil],
+                    @"Agent created with importer constructor must not be nil.");
+}
+
+
+- (void) testImportingInitializerPreservesName {
+    Agent *agent = [Agent agentInMOC:context withDictionary:@{agentPropertyName: agentMainName}];
+    XCTAssertEqualObjects(agent.name, agentMainName,
+                          @"Agent created with importer constructor must preserve name.");
+}
+
+
+- (void) testImportingInitializerPreservesDestructionPower {
+    Agent *agent = [Agent agentInMOC:context withDictionary:@{agentPropertyDestructionPower: @(agentMainDestructPower)}];
+    XCTAssertEqual([agent.destructionPower unsignedIntegerValue], agentMainDestructPower,
+                   @"Agent created with importer constructor must preserve destruction power.");
+}
+
+
+- (void) testImportingInitializerPreservesMotivation {
+    Agent *agent = [Agent agentInMOC:context withDictionary:@{agentPropertyMotivation: @(agentMainMotivation)}];
+    XCTAssertEqual([agent.motivation unsignedIntegerValue], agentMainMotivation,
+                   @"Agent created with importer constructor must preserve motivation.");
 }
 
 
