@@ -16,10 +16,27 @@ NSString *const domainPropertyName = @"name";
 
 @implementation Domain (Model)
 
-+ (instancetype) domainInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
+#pragma mark - Convenience constructors
+
++ (instancetype) domainInMOC:(NSManagedObjectContext *)moc {
     Domain *domain = [NSEntityDescription insertNewObjectForEntityForName:domainEntityName inManagedObjectContext:moc];
+    
+    return domain;
+}
+
+
++ (instancetype) domainInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
+    Domain *domain = [Domain domainInMOC:moc];
     domain.name = name;
     
+    return domain;
+}
+
+
++ (instancetype) domainInMOC:(NSManagedObjectContext *)moc withDictionary:(NSDictionary *)dict {
+    Domain *domain = [NSEntityDescription insertNewObjectForEntityForName:domainEntityName inManagedObjectContext:moc];
+    domain.name = dict[domainPropertyName];
+
     return domain;
 }
 

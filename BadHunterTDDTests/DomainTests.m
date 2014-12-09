@@ -78,6 +78,21 @@ static NSString *const domainAltName = @"domain2";
 }
 
 
+#pragma mark - Importing data
+
+- (void) testNotNilDomainIsCreatedWithImportingInitializer {
+    XCTAssertNotNil([Domain domainInMOC:context withDictionary:nil],
+                    @"Domain created with importer constructor must not be nil.");
+}
+
+
+- (void) testImportingInitializerPreservesName {
+    Domain *domain = [Domain domainInMOC:context withDictionary:@{domainPropertyName: domainMainName}];
+    XCTAssertEqual(domain.name, domainMainName,
+                   @"FreakType created with importer constructor must preserve name.");
+}
+
+
 #pragma mark - Fetches
 
 - (void) testFetchesDomainWithGivenName {
