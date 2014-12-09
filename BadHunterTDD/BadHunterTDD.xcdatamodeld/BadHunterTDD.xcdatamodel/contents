@@ -20,7 +20,7 @@
     </entity>
     <elements>
         <element name="Agent" positionX="261" positionY="189" width="128" height="148"/>
-        <element name="FreakType" positionX="279" positionY="243" width="128" height="73"/>
         <element name="Domain" positionX="297" positionY="252" width="128" height="73"/>
+        <element name="FreakType" positionX="279" positionY="243" width="128" height="73"/>
     </elements>
 </model>

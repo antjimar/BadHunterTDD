@@ -11,6 +11,7 @@
 
 NSString *const freakTypesKey = @"FreakTypes";
 NSString *const domainsKey = @"Domains";
+NSString *const agentsKey = @"Agents";
 
 
 
@@ -19,6 +20,7 @@ NSString *const domainsKey = @"Domains";
 - (void) importData:(NSDictionary *)dictionary {
     [self importFreakTypes:dictionary[freakTypesKey]];
     [self importDomains:dictionary[domainsKey]];
+    [self importAgents:dictionary[agentsKey]];
 }
 
     
@@ -36,4 +38,10 @@ NSString *const domainsKey = @"Domains";
 }
 
 
-    @end
+- (void) importAgents:(NSArray *)agentsDictionaries {
+    for (NSDictionary *agentDict in agentsDictionaries) {
+        [Agent agentInMOC:self.managedObjectContext withDictionary:agentDict];
+    }
+}
+
+@end
