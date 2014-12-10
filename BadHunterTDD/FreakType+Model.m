@@ -18,11 +18,25 @@ NSString *const freakTypePropertyName = @"name";
 
 #pragma mark - Convenience constructor
 
-+ (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
++ (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc {
     FreakType *freakType = [NSEntityDescription insertNewObjectForEntityForName:freakTypeEntityName
                                                          inManagedObjectContext:moc];
+    
+    return freakType;
+}
+
+
++ (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc withName:(NSString *)name {
+    FreakType *freakType = [FreakType freakTypeInMOC:moc];
     freakType.name = name;
     
+    return freakType;
+}
+
+
++ (instancetype) freakTypeInMOC:(NSManagedObjectContext *)moc withDictionary:(NSDictionary *)dict {
+    FreakType *freakType = [FreakType freakTypeInMOC:moc];
+    freakType.name = dict[freakTypePropertyName];
     return freakType;
 }
 
