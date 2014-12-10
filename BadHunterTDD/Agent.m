@@ -7,6 +7,7 @@
 //
 
 #import "Agent.h"
+#import "Domain.h"
 
 
 @implementation Agent
@@ -16,5 +17,7 @@
 @dynamic motivation;
 @dynamic name;
 @dynamic pictureUUID;
+@dynamic domains;
+@dynamic category;
 
 @end
