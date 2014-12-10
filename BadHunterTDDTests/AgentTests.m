@@ -271,4 +271,69 @@
                           @"Fetch for all agents with predicate must use the provided predicate.");
 }
 
+
+#pragma mark - Agent name validation
+
+- (void) testEmptyAgentNameCannotBeSaved {
+    sut.name = @"";
+    
+    XCTAssertFalse([context save:NULL], @"Empty agent name must not be allowed when saving");
+}
+
+
+- (void) testNonEmptyAgentNameCanBeSaved {
+    sut.name = @"A";
+    
+    XCTAssertTrue([context save:NULL], @"Non empty agent name must be allowed when saving");
+}
+
+
+- (void) testAgentNameWithOnlySpacesCannotBeSaved {
+    sut.name = @"  ";
+    
+    XCTAssertFalse([context save:NULL], @"Agent name with only spaces must not be allowed when saving");
+}
+
+
+- (void) testNonEmptyAgentNameReturnsNoError {
+    NSError *error = nil;
+    sut.name = @"A";
+
+    [context save:&error];
+    
+    XCTAssertNil(error, @"Non empty agent name must return no error when saving");
+    
+}
+
+
+- (void) testAgentNameWithOnlySpacesValidationReturnsAppropiateError {
+    NSString *name = @" ";
+    NSError *error;
+    
+    [sut validateName:&name error:&error];
+    
+    XCTAssertNotNil(error, @"An error must be returned when name is not validated.");
+    XCTAssertEqual(error.code, AgentErrorCodeNameEmpty,
+                   @"Appropiate error code must be returned when name is not validated.");
+}
+
+
+- (void) testAgentNameNullPointertDoesntThrowException {
+    NSError *error;
+
+    XCTAssertNoThrow([sut validateName:NULL error:&error],
+                     @"Nil agent name must not be allowed when validating.");
+}
+
+
+- (void) testAgentNameNullPointerValidationReturnsAppropiateError {
+    NSError *error;
+    
+    [sut validateName:nil error:&error];
+    
+    XCTAssertNotNil(error, @"An error must be returned when name is not validated.");
+    XCTAssertEqual(error.code, AgentErrorCodeNameNotDefined,
+                   @"Appropiate error code must be returned when name pointer is NULL.");
+}
+
 @end
