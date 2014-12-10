@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23AC1FAF5E908F5AA4BE5C21 /* libPods-BadHunterTDDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */; };
 		CF6D6DE71A32425B00C8CADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DE61A32425B00C8CADA /* main.m */; };
 		CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DE91A32425B00C8CADA /* AppDelegate.m */; };
 		CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
@@ -15,7 +16,10 @@
 		CF6D6DF61A32425B00C8CADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF41A32425B00C8CADA /* Main.storyboard */; };
 		CF6D6DF81A32425B00C8CADA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF71A32425B00C8CADA /* Images.xcassets */; };
 		CF6D6DFB1A32425B00C8CADA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6D6DF91A32425B00C8CADA /* LaunchScreen.xib */; };
-		CF6D6E071A32425B00C8CADA /* BadHunterTDDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */; };
+		CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E171A32485900C8CADA /* Agent+Model.m */; };
+		CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E191A3248B000C8CADA /* AgentTests.m */; };
+		CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */; };
+		CF6D6E201A32666D00C8CADA /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E1F1A32666D00C8CADA /* Agent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		483599ED6C790EB8C761C935 /* Pods-BadHunterTDDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadHunterTDDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadHunterTDDTests/Pods-BadHunterTDDTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A8CED7B674FEC689B47862F /* Pods-BadHunterTDDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadHunterTDDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BadHunterTDDTests/Pods-BadHunterTDDTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF6D6DE11A32425B00C8CADA /* BadHunterTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadHunterTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D6DE51A32425B00C8CADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6D6DE61A32425B00C8CADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,7 +50,12 @@
 		CF6D6DFA1A32425B00C8CADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF6D6E001A32425B00C8CADA /* BadHunterTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadHunterTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6D6E051A32425B00C8CADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadHunterTDDTests.m; sourceTree = "<group>"; };
+		CF6D6E161A32485900C8CADA /* Agent+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Agent+Model.h"; sourceTree = "<group>"; };
+		CF6D6E171A32485900C8CADA /* Agent+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Agent+Model.m"; sourceTree = "<group>"; };
+		CF6D6E191A3248B000C8CADA /* AgentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgentTests.m; sourceTree = "<group>"; };
+		CF6D6E1E1A32666D00C8CADA /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
+		CF6D6E1F1A32666D00C8CADA /* Agent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agent.m; sourceTree = "<group>"; };
+		E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadHunterTDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +70,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AC1FAF5E908F5AA4BE5C21 /* libPods-BadHunterTDDTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6344B27DB84EA608CAB07090 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				483599ED6C790EB8C761C935 /* Pods-BadHunterTDDTests.debug.xcconfig */,
+				8A8CED7B674FEC689B47862F /* Pods-BadHunterTDDTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BAAE0AB340F11007E7948EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF6D6DD81A32425B00C8CADA = {
 			isa = PBXGroup;
 			children = (
 				CF6D6DE31A32425B00C8CADA /* BadHunterTDD */,
 				CF6D6E031A32425B00C8CADA /* BadHunterTDDTests */,
 				CF6D6DE21A32425B00C8CADA /* Products */,
+				6344B27DB84EA608CAB07090 /* Pods */,
+				8BAAE0AB340F11007E7948EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,16 +117,12 @@
 		CF6D6DE31A32425B00C8CADA /* BadHunterTDD */ = {
 			isa = PBXGroup;
 			children = (
-				CF6D6DE81A32425B00C8CADA /* AppDelegate.h */,
-				CF6D6DE91A32425B00C8CADA /* AppDelegate.m */,
-				CF6D6DEE1A32425B00C8CADA /* MasterViewController.h */,
-				CF6D6DEF1A32425B00C8CADA /* MasterViewController.m */,
-				CF6D6DF11A32425B00C8CADA /* DetailViewController.h */,
-				CF6D6DF21A32425B00C8CADA /* DetailViewController.m */,
+				CF6D6E121A32480600C8CADA /* Model */,
+				CF6D6E101A3247E300C8CADA /* App Delegate */,
+				CF6D6E111A3247F600C8CADA /* View Controllers */,
 				CF6D6DF41A32425B00C8CADA /* Main.storyboard */,
 				CF6D6DF71A32425B00C8CADA /* Images.xcassets */,
 				CF6D6DF91A32425B00C8CADA /* LaunchScreen.xib */,
-				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
 				CF6D6DE41A32425B00C8CADA /* Supporting Files */,
 			);
 			path = BadHunterTDD;
@@ -113,7 +140,7 @@
 		CF6D6E031A32425B00C8CADA /* BadHunterTDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF6D6E061A32425B00C8CADA /* BadHunterTDDTests.m */,
+				CF6D6E1B1A3248B800C8CADA /* Model */,
 				CF6D6E041A32425B00C8CADA /* Supporting Files */,
 			);
 			path = BadHunterTDDTests;
@@ -125,6 +152,46 @@
 				CF6D6E051A32425B00C8CADA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF6D6E101A3247E300C8CADA /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DE81A32425B00C8CADA /* AppDelegate.h */,
+				CF6D6DE91A32425B00C8CADA /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		CF6D6E111A3247F600C8CADA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6DEE1A32425B00C8CADA /* MasterViewController.h */,
+				CF6D6DEF1A32425B00C8CADA /* MasterViewController.m */,
+				CF6D6DF11A32425B00C8CADA /* DetailViewController.h */,
+				CF6D6DF21A32425B00C8CADA /* DetailViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CF6D6E121A32480600C8CADA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6E1E1A32666D00C8CADA /* Agent.h */,
+				CF6D6E1F1A32666D00C8CADA /* Agent.m */,
+				CF6D6DEB1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld */,
+				CF6D6E161A32485900C8CADA /* Agent+Model.h */,
+				CF6D6E171A32485900C8CADA /* Agent+Model.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF6D6E1B1A3248B800C8CADA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6D6E191A3248B000C8CADA /* AgentTests.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF6D6E0D1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDDTests" */;
 			buildPhases = (
+				4888EDC40C5CF6C05234D542 /* Check Pods Manifest.lock */,
 				CF6D6DFC1A32425B00C8CADA /* Sources */,
 				CF6D6DFD1A32425B00C8CADA /* Frameworks */,
 				CF6D6DFE1A32425B00C8CADA /* Resources */,
+				8E263542F526A766D6829CED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +291,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4888EDC40C5CF6C05234D542 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E263542F526A766D6829CED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadHunterTDDTests/Pods-BadHunterTDDTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF6D6DDD1A32425B00C8CADA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -229,9 +331,11 @@
 			files = (
 				CF6D6DF31A32425B00C8CADA /* DetailViewController.m in Sources */,
 				CF6D6DF01A32425B00C8CADA /* MasterViewController.m in Sources */,
+				CF6D6E181A32485900C8CADA /* Agent+Model.m in Sources */,
 				CF6D6DED1A32425B00C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6DEA1A32425B00C8CADA /* AppDelegate.m in Sources */,
 				CF6D6DE71A32425B00C8CADA /* main.m in Sources */,
+				CF6D6E201A32666D00C8CADA /* Agent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF6D6E071A32425B00C8CADA /* BadHunterTDDTests.m in Sources */,
+				CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
+				CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +476,7 @@
 		};
 		CF6D6E0E1A32425B00C8CADA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 483599ED6C790EB8C761C935 /* Pods-BadHunterTDDTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -390,6 +496,7 @@
 		};
 		CF6D6E0F1A32425B00C8CADA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A8CED7B674FEC689B47862F /* Pods-BadHunterTDDTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -422,6 +529,7 @@
 				CF6D6E0C1A32425B00C8CADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF6D6E0D1A32425B00C8CADA /* Build configuration list for PBXNativeTarget "BadHunterTDDTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +538,7 @@
 				CF6D6E0F1A32425B00C8CADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
