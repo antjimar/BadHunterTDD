@@ -171,4 +171,104 @@
     XCTAssertNotEqualObjects(uuid1, uuid2, @"Generated picture UUID must be different each time.");
 }
 
+
+#pragma mark - Fetch requests
+
+- (void) testFetchForAllAgentsIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgents], @"Fetch for all the agents must return a not nil request.");
+}
+
+
+- (void) testFetchForAllAgentsQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsBatchIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsSortsByName {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgents];
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
+                          @"Fetch for all agents must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgentsWithSortDescriptors:nil]);
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:nil];
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents with sort descriptors queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsBatchWithSortDescriptorsIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:nil];
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents with sort descriptors batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsWithSortDescriptorsUsesProvidedSortDescriptors {
+    NSSortDescriptor *nameSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    NSArray *sortDescriptors = @[nameSortDescriptor];
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithSortDescriptors:sortDescriptors];
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors, sortDescriptors,
+                          @"Fetch for all agents with sort descriptors must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateIsNotNil {
+    XCTAssertNotNil([Agent fetchForAllAgentsWithPredicate:nil],
+                    @"Fetch for all the agents with predicate must return a not nil request.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateQueriesAgentEntity {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqualObjects(fetchRequest.entityName, agentEntityName,
+                          @"Fetch for all the agents with predicate queries the agent entity.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateBatchIsConfigured {
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqual(fetchRequest.fetchBatchSize, 20,
+                   @"Fetch for all the agents with predicate batch size must be configured.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateSortsByName {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:agentPropertyName ascending:YES];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:nil];
+
+    XCTAssertEqualObjects(fetchRequest.sortDescriptors[0], sortDescriptor,
+                          @"Fetch for all agents with predicate  must be sorted by name first.");
+}
+
+
+- (void) testFetchForAllAgentsWithPredicateUsesProvidedPredicate {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", agentPropertyDestructionPower, @2];
+    
+    NSFetchRequest *fetchRequest = [Agent fetchForAllAgentsWithPredicate:predicate];
+    
+    XCTAssertEqualObjects(fetchRequest.predicate, predicate,
+                          @"Fetch for all agents with predicate must use the provided predicate.");
+}
+
 @end
