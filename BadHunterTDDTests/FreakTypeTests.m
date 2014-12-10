@@ -7,16 +7,11 @@
 //
 
 
-#import <XCTest/XCTest.h>
+#import "CoreDataTestCase.h"
 #import "FreakType+Model.h"
 
 
-@interface FreakTypeTests : XCTestCase {
-    // Core Data stack objects.
-    NSManagedObjectModel *model;
-    NSPersistentStoreCoordinator *coordinator;
-    NSPersistentStore *store;
-    NSManagedObjectContext *context;
+@interface FreakTypeTests : CoreDataTestCase {
     // Object to test.
     FreakType *sut;
     // Other objects
@@ -38,28 +33,7 @@ static NSString *const freakTypeAltName = @"Type2";
 - (void) setUp {
     [super setUp];
 
-    [self createCoreDataStack];
-    [self createFixture];
     [self createSut];
-}
-
-
-- (void) createCoreDataStack {
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    model = [NSManagedObjectModel mergedModelFromBundles:@[bundle]];
-    coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
-    store = [coordinator addPersistentStoreWithType: NSInMemoryStoreType
-                                      configuration: nil
-                                                URL: nil
-                                            options: nil
-                                              error: NULL];
-    context = [[NSManagedObjectContext alloc] init];
-    context.persistentStoreCoordinator = coordinator;
-}
-
-
-- (void) createFixture {
-    freakType1 = [FreakType freakTypeInMOC:context withName:freakTypeAltName];
 }
 
 
@@ -70,8 +44,6 @@ static NSString *const freakTypeAltName = @"Type2";
 
 - (void) tearDown {
     [self releaseSut];
-    [self releaseFixture];
-    [self releaseCoreDataStack];
 
     [super tearDown];
 }
@@ -79,19 +51,6 @@ static NSString *const freakTypeAltName = @"Type2";
 
 - (void) releaseSut {
     sut = nil;
-}
-
-
-- (void) releaseFixture {
-    freakType1 = nil;
-}
-
-
-- (void) releaseCoreDataStack {
-    context = nil;
-    store = nil;
-    coordinator = nil;
-    model = nil;
 }
 
 

@@ -26,6 +26,7 @@
 		CF6D6E311A3397DF00C8CADA /* FreakType+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E301A3397DF00C8CADA /* FreakType+Model.m */; };
 		CF6D6E341A339F3800C8CADA /* Domain+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E331A339F3800C8CADA /* Domain+Model.m */; };
 		CF6D6E361A339F8800C8CADA /* DomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6D6E351A339F8800C8CADA /* DomainTests.m */; };
+		CF8B0E721A348719009E7BB4 /* CoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B0E711A348719009E7BB4 /* CoreDataTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		CF6D6E321A339F3800C8CADA /* Domain+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Domain+Model.h"; sourceTree = "<group>"; };
 		CF6D6E331A339F3800C8CADA /* Domain+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Domain+Model.m"; sourceTree = "<group>"; };
 		CF6D6E351A339F8800C8CADA /* DomainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DomainTests.m; sourceTree = "<group>"; };
+		CF8B0E701A348719009E7BB4 /* CoreDataTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestCase.h; sourceTree = "<group>"; };
+		CF8B0E711A348719009E7BB4 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
 		E5CA1062A529D94E3012459E /* libPods-BadHunterTDDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadHunterTDDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +216,8 @@
 		CF6D6E1B1A3248B800C8CADA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF8B0E701A348719009E7BB4 /* CoreDataTestCase.h */,
+				CF8B0E711A348719009E7BB4 /* CoreDataTestCase.m */,
 				CF6D6E191A3248B000C8CADA /* AgentTests.m */,
 				CF6D6E2D1A33979000C8CADA /* FreakTypeTests.m */,
 				CF6D6E351A339F8800C8CADA /* DomainTests.m */,
@@ -377,6 +382,7 @@
 				CF6D6E1D1A324C9500C8CADA /* BadHunterTDD.xcdatamodeld in Sources */,
 				CF6D6E1A1A3248B000C8CADA /* AgentTests.m in Sources */,
 				CF6D6E361A339F8800C8CADA /* DomainTests.m in Sources */,
+				CF8B0E721A348719009E7BB4 /* CoreDataTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
